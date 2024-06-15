@@ -14,7 +14,7 @@ return new class extends Migration {
         Schema::create('sound_categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('icon_svg')->nullable();
+            $table->string('icon_svg_file_path')->nullable();
             $table->timestamps();
         });
 

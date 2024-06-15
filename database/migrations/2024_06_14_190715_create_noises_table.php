@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('audio_file_path');
-            $table->text('icon_svg')->nullable();
+            $table->string('icon_svg_file_path')->nullable();
             $table->timestamps();
         });
     }

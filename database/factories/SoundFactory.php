@@ -28,7 +28,7 @@ class SoundFactory extends Factory
     {
         return [
             'name' => fake()->word,
-            'audio_file_path' => 'https://commondatastorage.googleapis.com/codeskulptor-demos/pyman_assets/ateapill.ogg',
+            'audio_file_path' => fake()->url,
             'sound_category_id' => SoundCategory::inRandomOrder()->first()->id,
         ];
     }
