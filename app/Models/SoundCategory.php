@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sound extends Model
+class SoundCategory extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'audio_file_path'];
+    protected $fillable = ['name', 'icon_svg'];
 }

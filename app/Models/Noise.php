@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Noise extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name', 'audio_file_path', 'icon_svg'];
 }
