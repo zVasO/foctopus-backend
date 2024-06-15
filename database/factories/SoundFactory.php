@@ -26,9 +26,9 @@ class SoundFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name,
+            'name' => fake()->word,
             'audio_file_path' => 'https://commondatastorage.googleapis.com/codeskulptor-demos/pyman_assets/ateapill.ogg',
-            'icon_svg' => fake()->optional(0.9, null)->randomElements(self::getNoisesArray())
+            'icon_svg' => fake()->optional(0.9, null)->randomElement(self::getNoisesArray())
         ];
     }
 

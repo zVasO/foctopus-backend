@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Noise;
 use Illuminate\Database\Seeder;
 
 class NoiseSeeder extends Seeder
@@ -12,6 +12,6 @@ class NoiseSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Noise::factory(10)->create();
     }
 }
