@@ -28,6 +28,11 @@ return new class extends Migration {
      */
     public function down(): void
     {
+        Schema::table('sounds', static function (Blueprint $table) {
+            $table->dropForeign(['sound_category_id']);
+            $table->dropColumn('sound_category_id');
+        });
+
         Schema::dropIfExists('sound_categories');
     }
 };
