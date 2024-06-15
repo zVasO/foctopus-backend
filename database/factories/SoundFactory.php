@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Sound;
+use App\Models\SoundCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -28,6 +29,7 @@ class SoundFactory extends Factory
         return [
             'name' => fake()->word,
             'audio_file_path' => 'https://commondatastorage.googleapis.com/codeskulptor-demos/pyman_assets/ateapill.ogg',
+            'sound_category_id' => SoundCategory::inRandomOrder()->first()->id,
         ];
     }
 }

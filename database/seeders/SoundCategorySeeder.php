@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\SoundCategory;
 use Illuminate\Database\Seeder;
 
 class SoundCategorySeeder extends Seeder
@@ -12,6 +12,6 @@ class SoundCategorySeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        SoundCategory::factory(5)->create();
     }
 }
