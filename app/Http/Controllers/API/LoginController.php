@@ -12,6 +12,11 @@ class LoginController extends Controller
 {
     public function login(Request $request): JsonResponse
     {
+        $request->validate([
+            'email' => ['required', 'string'],
+            'password' => ['required', 'string'],
+        ]);
+
         $user = User::where('email', $request->email)->first();
 
         if (!$user || !Hash::check($request->password, $user->password)) {
