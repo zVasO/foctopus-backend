@@ -10,7 +10,7 @@ class SoundCategory extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'icon_svg'];
+    protected $fillable = ['name', 'icon_svg_file_path'];
 
     public function sounds(): HasMany
     {
