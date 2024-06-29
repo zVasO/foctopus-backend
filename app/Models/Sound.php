@@ -14,6 +14,6 @@ class Sound extends Model
 
     public function category(): BelongsTo
     {
-        return $this->belongsTo(SoundCategory::class);
+        return $this->belongsTo(SoundCategory::class, 'sound_category_id');
     }
 }
