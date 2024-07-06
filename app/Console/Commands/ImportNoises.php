@@ -44,6 +44,7 @@ class ImportNoises extends Command
         $files = File::files($sourcePath);
         foreach ($files as $file) {
             $fileName = $file->getFilename();
+            $fileNameWithoutExtension = $file->getFilenameWithoutExtension();
             $newPath = $destinationPath . '/' . $fileName;
 
             $fileGotMovedWithSuccess = File::move($file->getPathname(), $newPath);
@@ -53,9 +54,9 @@ class ImportNoises extends Command
                 $publicLink = $assetUrl . '/noises/' . $fileName;
 
                 Noise::createOrFirst([
-                    'name' => $fileName,
+                    'name' => $fileNameWithoutExtension,
                     'audio_file_path' => $publicLink,
-                    'icon_svg_file_path' => "public/icons/noise.svg",
+                    'icon_svg_file_path' => $assetUrl . '/svg/' . $fileNameWithoutExtension . '.svg',
                 ]);
 
                 $this->info("File move with success : $publicLink");

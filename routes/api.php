@@ -10,7 +10,9 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 
+Route::get('/users', [UserController::class, 'getAll'])->name('getAllUsers');
+Route::get('/noises', [NoiseController::class, 'getAll'])->name('getAllNoises');
+
 Route::middleware(['auth:sanctum'])->group(function () {
-    Route::get('/users', [UserController::class, 'getAll'])->name('getAllUsers');
-    Route::get('/noises', [NoiseController::class, 'getAll'])->name('getAllNoises');
+
 });
