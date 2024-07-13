@@ -9,5 +9,5 @@ class Noise extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'audio_file_path', 'icon_svg'];
+    protected $fillable = ['name', 'audio_file_path', 'icon_svg_file_path'];
 }
